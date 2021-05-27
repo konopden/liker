@@ -1,0 +1,36 @@
+{
+    "name": "konopden/licker",
+    "description": "Like or dislike something.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Denis Konopatskyi",
+            "email": "konopden@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.18"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dk\\Liker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dk\\Liker\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dk\\Liker\\LikerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
