@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\Schema;
 
 class CreateLikesTable extends Migration
 {
@@ -17,7 +18,6 @@ class CreateLikesTable extends Migration
             $table->unsignedInteger('likable_id');
             $table->string('likable_type')->index();
             $table->enum('type', ['like', 'dislike'])->default('like');
-
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateLikesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('likes');
+        Schema::dropIfExists('likes');
     }
 }

@@ -1,4 +1,9 @@
 #### Installation
+
+```bash
+composer require konopden/licker
+```
+
 config/app.php
 ```
 // add to providers
